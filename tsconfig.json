@@ -6,6 +6,9 @@
     "strict": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ESNext",
     "paths": {
       "tasks/*": ["*"]
     }

@@ -13,8 +13,12 @@ Don't forget to mock `fetchIsUserNameAvailable` and consider different scenarios
 
 Write tests and mocks to cover all the requirements. Try to avoid writing the code.
 
-The next articles from the documentation can be useful:
+Useful links:
 
 - [Calling jest.mock() with the module factory parameter](https://jestjs.io/docs/es6-class-mocks#calling-jestmock-with-the-module-factory-parameter)
 - [jest.mock](https://jestjs.io/docs/upgrading-to-jest29#jest-mock)
 - [jest.mocked](https://jestjs.io/docs/mock-function-api#jestmockedsource-options)
+
+---
+
+[[Back to the main page](../README.md)]

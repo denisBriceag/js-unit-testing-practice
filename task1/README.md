@@ -13,3 +13,7 @@ interface IQuantityValidator {
   validate(quantity: number): { isValid: boolean; error: string | null };
 }
 ```
+
+---
+
+[[Back to the main page](../README.md)]
