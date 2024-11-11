@@ -48,4 +48,4 @@ Let's imagine, that logic behind this methods is quite difficult, and we are goi
 
 ---
 
-[[Back to the main page](../README.md)]
+[Back to the main page](../README.md]

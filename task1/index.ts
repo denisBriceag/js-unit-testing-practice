@@ -1,11 +1,13 @@
-interface IQuantityValidator {
-  validate(quantity: number): { isValid: boolean; error: string | null };
-}
+import { fetchIsUserNameAvailable } from 'tasks/task1/fetchIsUserNameValid';
 
-export class QuantityValidator implements IQuantityValidator {
-  constructor(threshold: number, packageSize: number) {}
-
-  public validate(quantity: number): { isValid: boolean; error: string | null } {
-    throw new Error('Not implemented');
+export const validateUserName = async (userName: string): Promise<boolean> => {
+  if (!/^[a-zA-Z][0-9a-zA-Z]{2,}$/.test(userName)) {
+    return false;
   }
-}
+
+  try {
+    return fetchIsUserNameAvailable(userName);
+  } catch (e) {
+    return false;
+  }
+};

@@ -1,6 +1,16 @@
 import { getUtcStringDate } from 'tasks/task3';
-import { makeConstructor } from 'timezoned-date';
+import { setupMockDate, MockDateSetup } from './testUtils';
 
 describe('task3', () => {
-  // mock the date and write your tests here
+  let mockDate: MockDateSetup;
+
+  beforeEach(() => {
+    mockDate = setupMockDate();
+  });
+
+  afterEach(() => {
+    mockDate.reset();
+  });
+
+  // write your tests here
 });

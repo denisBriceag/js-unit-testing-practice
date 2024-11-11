@@ -1,10 +1,7 @@
-import { validateUserName } from 'task2/index';
-import { fetchIsUserNameAvailable } from 'task2/fetchIsUserNameValid';
+import { QuantityValidator } from 'tasks/task2';
 
-jest.mock('task2/fetchIsUserNameValid', 
-  // write your mock here
-);
-
-describe('task2', () => {
-  // write your tests here :)
+describe('QuantityValidator', () => {
+  it('', () => {
+    // write your first test here :)
+  });
 });

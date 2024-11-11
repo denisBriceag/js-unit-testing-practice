@@ -1,7 +1,13 @@
-import { fetchIsUserNameAvailable } from 'task2/fetchIsUserNameValid';
+interface IQuantityValidator {
+  validate(quantity: number): { isValid: boolean; error: string | null };
+}
 
-export const validateUserName = async (userName: string): Promise<boolean> => {
-  // here we will add logic to validate user name before making a request
+export class QuantityValidator implements IQuantityValidator {
+  constructor(threshold: number, packageSize: number) {
+    // here some validation logic should be
+  }
 
-  return fetchIsUserNameAvailable(userName);
-};
+  public validate(quantity: number): { isValid: boolean; error: string | null } {
+    throw new Error('Not implemented');
+  }
+}
