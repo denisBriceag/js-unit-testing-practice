@@ -40,3 +40,4 @@ Advanced tasks (optional but still recommended):
 
 - [Task 4: Parametrized tests](./task4/README.md)
 - [Task 5: Testing stateful modules](./task5/README.md)
+- [Task 6: Stubbing api calls](./task6/README.md)
