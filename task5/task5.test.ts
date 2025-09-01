@@ -1,19 +1,43 @@
-import { GlobalCounter } from './index';
+describe("GlobalCounter (isolated per test)", () => {
+  const load = () => {
+    let GlobalCounter: typeof import("./index").GlobalCounter;
 
-describe('GlobalCounter', () => {
-  it('has initial value "0"', () => {
-    // write isolated test
+    jest.isolateModules(() => {
+      ({ GlobalCounter } = require("./index"));
+    });
+
+    return GlobalCounter!;
+  };
+
+  it('should have initial value "0"', () => {
+    const Counter = load();
+
+    expect(Counter.getValue()).toBe(0);
   });
 
-  it('increments counter', () => {
-    // write another isolated test
+  it("should increment counter", () => {
+    const Counter = load();
+
+    Counter.increment(); // 1
+
+    expect(Counter.getValue()).toBe(1);
   });
 
-  it('decrements value', () => {
-    // your tests could be here
+  it("should decrement value", () => {
+    const Counter = load();
+
+    Counter.decrement();
+
+    expect(Counter.getValue()).toBe(-1);
   });
 
-  it('multiplies counter', () => {
-    // you won't believe :)
+  it("should multiply counter", () => {
+    const Counter = load();
+
+    Counter.increment(); // 1
+    Counter.increment(); // 2
+    Counter.multiply(5); // 10
+
+    expect(Counter.getValue()).toBe(10);
   });
 });

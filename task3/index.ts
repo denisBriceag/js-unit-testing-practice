@@ -1,7 +1,14 @@
-export const getUtcStringDate = (date?: Date) => {
-  const inputDate = date || new Date();
+export const getUtcStringDate = (date?: Date): string => {
+    const d = date ?? new Date();
 
-  // we will format `inputDate` in this method and return string in ISO8601 format, for now just stub:
+    const pad = (n: number) => n.toString().padStart(2, '0');
 
-  return '2019-03-05T14:08:07.673Z';
+    const yyyy = d.getUTCFullYear();
+    const mm = pad(d.getUTCMonth() + 1);
+    const dd = pad(d.getUTCDate());
+    const hh = pad(d.getUTCHours());
+    const mi = pad(d.getUTCMinutes());
+    const ss = pad(d.getUTCSeconds());
+
+    return `${yyyy}-${mm}-${dd}T${hh}:${mi}:${ss}Z`;
 };
